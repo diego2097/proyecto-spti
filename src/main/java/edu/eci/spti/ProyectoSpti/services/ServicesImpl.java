@@ -6,21 +6,38 @@
 package edu.eci.spti.ProyectoSpti.services;
 
 import edu.eci.spti.ProyectoSpti.model.User;
-import edu.eci.spti.ProyectoSpti.persistence.repositorios.UserRepository;
+import edu.eci.spti.ProyectoSpti.repositorios.UserRepository;
+import java.util.ArrayList;
+import java.util.Iterator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author USUARIO
  */
+@Service
 public class ServicesImpl implements ServicesI{
     
     
     @Autowired
     private UserRepository userRepository;
 
+
     @Override
-    public void guardarUsuario(User user) {
+    public ArrayList<User> getUsers() {
+        ArrayList<User> usuarios = new ArrayList<User>();
+        Iterable<User> iterator = userRepository.findAll();
+        Iterator<User> it = iterator.iterator();
+        while (it.hasNext()) {
+            User cuenta = it.next();
+            usuarios.add(cuenta);
+        }
+        return usuarios;
+    }
+
+    @Override
+    public void saverUser(User user) {
         userRepository.save(user);
     }
     

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.spti.ProyectoSpti.persistence.repositorios;
+package edu.eci.spti.ProyectoSpti.repositorios;
 
 import edu.eci.spti.ProyectoSpti.model.User;
 import org.springframework.data.repository.CrudRepository;
@@ -15,8 +15,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserRepository  extends CrudRepository<User, Long> {
-    
-    
     
     
 }

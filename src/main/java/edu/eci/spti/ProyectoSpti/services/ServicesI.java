@@ -6,6 +6,7 @@
 package edu.eci.spti.ProyectoSpti.services;
 
 import edu.eci.spti.ProyectoSpti.model.User;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,8 +15,8 @@ import edu.eci.spti.ProyectoSpti.model.User;
 public interface ServicesI {
     
     
-    public void guardarUsuario(User user);
+    public void saverUser(User user);
     
-    
+    public ArrayList<User> getUsers();
     
 }
