@@ -1,0 +1,43 @@
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('/imagenes/fondo.gif');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+header{
+    border: black solid;
+    width: 90%;
+    height: 50%;
+}footer {
+    width: 58%;
+    position: absolute;
+    top: 125%;
+    left: 21%;
+    height: 20%;
+    background: #900;
+    color: #FFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 131%;
+    padding: 0 0 0 80px;
+    box-sizing: border-box;
+}
+footer span.programa {
+    float: left;
+    padding: 10px 30px 10px 10px;
+    margin: 70px 0;
+    text-align: center;
+}footer span.direccion {
+    float: left;
+    border-left: solid #fff 1px;
+    margin: 20px 0;
+    padding: 10px 10px 10px 30px;
+}
