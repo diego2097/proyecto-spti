@@ -1,10 +1,12 @@
 app = (function () {
     // PROMESAS DEL REGISTRO
     var onSucessRegistro = function (data) {
+        console.log("appc")
         alert("Ha sido registrado exitosamente");
-        
+
     }
     var onErrorRegistro = function (data) {
+        console.log("error")
         alert("No se pudo realizar el registro correctamente");
         
     }
