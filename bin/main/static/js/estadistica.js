@@ -1,6 +1,8 @@
 var estadisticaModule = (function() {
   var _contrasenas = null;
   var dic = {};
+  
+   
 
   _getContrasena = function(contrasenas) {
     _contrasenas = contrasenas;
@@ -13,6 +15,7 @@ var estadisticaModule = (function() {
       }
     }
   };
+
   function leerArchivo(e) {
     var archivo = e.target.files[0];
     console.log(archivo);
@@ -47,6 +50,9 @@ var estadisticaModule = (function() {
       document
         .getElementById("file-input")
         .addEventListener("change", leerArchivo, false);
+    },
+    getDic: function(){
+      return dic;
     }
   };
 })();
