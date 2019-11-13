@@ -27,11 +27,10 @@ public class ApiController {
     @Autowired
     ServicesI services;
 
-    
-     @RequestMapping(method = GET, value = "/users")
+    @RequestMapping(method = GET, value = "/users")
     public ResponseEntity<?> getCuentas() {
         try {
-            //obtener datos que se enviaran a traves del API
+            // obtener datos que se enviaran a traves del API
             ArrayList<User> users = new ArrayList<User>();
             users = services.getUsers();
             return new ResponseEntity<>(users, HttpStatus.ACCEPTED);
@@ -39,10 +38,9 @@ public class ApiController {
             return new ResponseEntity<>("400 bad request", HttpStatus.NOT_FOUND);
         }
     }
-    
+
     @RequestMapping(path = "/users", method = POST)
-    public ResponseEntity<?> addCuenta(@RequestBody User user
-    ) {
+    public ResponseEntity<?> addCuenta(@RequestBody User user) {
         try {
             services.saverUser(user);
             return new ResponseEntity<>(HttpStatus.CREATED);
@@ -51,15 +49,20 @@ public class ApiController {
             return new ResponseEntity<>("ERROR 403", HttpStatus.FORBIDDEN);
         }
     }
-    
-    
+
+    @RequestMapping(method = GET, value = "/contrasenas")
+    public ResponseEntity<?> getContrasenas() {
+        try {
+            // obtener datos que se enviaran a traves del API
+            ArrayList<User> users = services.getUsers();
+            ArrayList<String> contrasena = new ArrayList<String>();
+            for (User u : users) {
+                contrasena.add(u.getContrasena());
+            }
+            return new ResponseEntity<>(contrasena, HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+            return new ResponseEntity<>("400 bad request", HttpStatus.NOT_FOUND);
+        }
+    }
+
 }
-
-
-
-
-
-
-
-
-

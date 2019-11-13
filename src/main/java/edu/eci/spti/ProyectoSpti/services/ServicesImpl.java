@@ -17,12 +17,10 @@ import org.springframework.stereotype.Service;
  * @author USUARIO
  */
 @Service
-public class ServicesImpl implements ServicesI{
-    
-    
+public class ServicesImpl implements ServicesI {
+
     @Autowired
     private UserRepository userRepository;
-
 
     @Override
     public ArrayList<User> getUsers() {
@@ -40,8 +38,5 @@ public class ServicesImpl implements ServicesI{
     public void saverUser(User user) {
         userRepository.save(user);
     }
-    
-    
-    
-    
+
 }

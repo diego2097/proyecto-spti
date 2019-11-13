@@ -13,10 +13,9 @@ import java.util.ArrayList;
  * @author USUARIO
  */
 public interface ServicesI {
-    
-    
+
     public void saverUser(User user);
-    
+
     public ArrayList<User> getUsers();
-    
+
 }
