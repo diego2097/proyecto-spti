@@ -27,25 +27,42 @@ var estadisticaModule = (function() {
       "upperLower": /^[A-Za-z]+$/,
       "number": /^[0-9]+$/,
       "upperLowerNumber": /^[A-Za-z0-9]+$/,
-      "upperLowerNumberPoint": /^[A-Za-z0-9]+$/
+      "upperLowerNumberPoint": /^[A-Za-z0-9]+$/,
+      "puntos": /[!-.|0-9]/
     };
+
+    var puntuacion = password.length;
+    
       
-      if (regxs.lower.test(password)) {
-        console.log(1);
-      }
-      else if (regxs.upper.test(password)){
-        console.log(11);
-      }
-      else if (regxs.number.test(password)){
-        console.log(111);
-      }
-      else if (regxs.upperLower.test(password)){
-        console.log(2);
-      }
-      else if (regxs.upperLowerNumber.test(password)){
-        console.log(4);
-      }
-     
+    if (regxs.lower.test(password)) {
+      console.log(1);
+    }
+    else if (regxs.upper.test(password)){
+      console.log(11);
+    }
+    else if (regxs.number.test(password)){
+      console.log(111);
+    }
+    else if (regxs.upperLower.test(password)){
+      console.log(2);
+      puntuacion*=2;
+    }
+    else if (regxs.upperLowerNumber.test(password)){
+      console.log(4);
+      puntuacion*=3;
+    }
+    else if (regxs.puntos.test(password)){
+      console.log(123);
+      puntuacion*=4;
+    }
+    console.log(puntuacion);
+    if (puntuacion< 10){
+      debiles+=1;
+    }else if (puntuacion > 10 && puntuacion < 20){
+      medias+=1;
+    }else{
+      fuertes+=1;
+    }
   }
 
   function leerArchivo(e) {
@@ -85,6 +102,16 @@ var estadisticaModule = (function() {
     },
     getDic: function(){
       return dic;
+    },
+    getDebiles: function(){
+      return debiles;
+    },
+    getMedias: function(){
+      return medias;
+    },
+    getFuertes: function(){
+      return fuertes;
     }
+
   };
 })();
