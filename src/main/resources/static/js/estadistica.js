@@ -26,19 +26,11 @@ var estadisticaModule = (function() {
       "upper": /^[A-Z]+$/,
       "upperLower": /^[A-Za-z]+$/,
       "number": /^[0-9]+$/,
-      "punt": /^[!"#$%&'()*+,\-./:;<=>?@[]_`{}]+$/,
-      "puntNumber": /^[0-9!"#$%&'()*+,\-./:;<=>?@[]_`{}]+$/
+      "upperLowerNumber": /^[A-Za-z0-9]+$/,
+      "upperLowerNumberPoint": /^[A-Za-z0-9]+$/
     };
-      if (regxs.puntNumber.test(password)){
-        console.log(3);
-      }
-      else if (regxs.punt.test(password) && regxs.upper.test(password)){
-        console.log(3);
-      }
-      else if (regxs.punt.test(password) && regxs.lower.test(password)){
-        console.log(3);
-      }
-      else if (regxs.lower.test(password)) {
+      
+      if (regxs.lower.test(password)) {
         console.log(1);
       }
       else if (regxs.upper.test(password)){
@@ -47,11 +39,11 @@ var estadisticaModule = (function() {
       else if (regxs.number.test(password)){
         console.log(111);
       }
-      else if (regxs.punt.test(password)){
-        console.log(1111);
-      }
       else if (regxs.upperLower.test(password)){
         console.log(2);
+      }
+      else if (regxs.upperLowerNumber.test(password)){
+        console.log(4);
       }
      
   }
@@ -81,7 +73,7 @@ var estadisticaModule = (function() {
     }
     console.log(dic);
     var elemento = document.getElementById("contenido-archivo");
-    elemento.innerHTML = contenido;
+    //elemento.innerHTML = contenido;
   }
 
   return {
