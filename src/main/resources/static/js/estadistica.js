@@ -28,8 +28,15 @@ var estadisticaModule = (function() {
   }
 
   function mostrarContenido(contenido) {
+    var lista = contenido.split("\n");
+    for (i = 0; i < lista.length; i++) {
+      if (lista[i] in dic) {
+        dic[lista[i]]++;
+      } else {
+        dic[lista[i]] = 0;
+      }
+    }
     console.log(dic);
-    console.log(contenido.split("\n"));
     var elemento = document.getElementById("contenido-archivo");
     elemento.innerHTML = contenido;
   }
