@@ -1,6 +1,7 @@
 var estadisticaModule = (function() {
   var _contrasenas = null;
   var dic = {};
+  var dic2 = {};
   var debiles = 0;  
   var medias = 0; 
   var fuertes = 0;
@@ -83,10 +84,13 @@ var estadisticaModule = (function() {
     var lista = contenido.split("\n");
     for (i = 0; i < lista.length; i++) {
       if (lista[i] in dic) {
-        dic[lista[i]]++;
-      } else {
-        dic[lista[i]] = 0;
-      }
+        if (dic2[lista[i]] in dic2){
+          dic2[lista[i]]++;
+        }
+        else {
+          dic2[lista[i]] = 1;
+        }
+      } 
     }
     console.log(dic);
     var elemento = document.getElementById("contenido-archivo");
