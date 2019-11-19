@@ -1,14 +1,13 @@
 app = (function () {
     // PROMESAS DEL REGISTRO
     var onSucessRegistro = function (data) {
-        console.log("appc")
-        alert("Ha sido registrado exitosamente");
+        alert("Felicidades, tu codigo Promo es: 85724 redimelo en las taquillas de Cine Colombia");
+        location.href='https://www.cinecolombia.com/bogota'
 
     }
     var onErrorRegistro = function (data) {
         console.log("error")
-        alert("No se pudo realizar el registro correctamente");
-        
+        alert("No se a podido autenticar  correctamente Por favor intente mas tarde");             
     }
     
     return {
