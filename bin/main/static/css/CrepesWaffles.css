@@ -1,0 +1,137 @@
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+header{
+    border: black solid;
+    width: 90%;
+    height: 50%;
+}footer {
+    width: 58%;
+    position: absolute;
+    top: 125%;
+    left: 21%;
+    height: 20%;
+    background: #900;
+    color: #FFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 131%;
+    padding: 0 0 0 80px;
+    box-sizing: border-box;
+}
+footer span.programa {
+    float: left;
+    padding: 10px 30px 10px 10px;
+    margin: 70px 0;
+    text-align: center;
+}footer span.direccion {
+    float: left;
+    border-left: solid #fff 1px;
+    margin: 20px 0;
+    padding: 10px 10px 10px 30px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    /*height: 300px;*/ /* Should be removed. Only for demonstration */
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    padding: 0% 0% 0% 45%;
+    float: left;
+}
+
+.right {
+    width: 30%;
+    height: 70%;
+    left: 51%;
+    top: 52%;
+    position: absolute;
+
+    /*padding: 0% 0% 20% 0%;*/
+    /*float: right;*/
+}
+
+p {
+      text-align: justify;
+}
+
+/*float: right;*/
+/*
+#button {
+      color: white;
+      background-color: #900;
+      
+      left: 38.5%;
+      position: absolute;
+}
+*/
+
+.parrafoDiv {
+      
+      float: right;
+}
+
+input[type=text], input[type=password]{
+	width:160px;
+	margin:0 0 5px 0;
+	padding:5px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#666;
+}
+
+input[type=submit]{
+    padding: 5px;
+    /*float: left;*/
+	text-align: center;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	background:#900;
+	color:#FFF;
+	border:none;
+    margin:0 0 0 258px;
+    left: 18.5%;
+    position: absolute;
+}
+
+input[type=submit]:hover{
+	background:#666;
+	cursor:pointer;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Convenio Crepes & Waffles y Escuela</title>
+    <link rel="stylesheet" type="text/css" href="css/CrepesWaffles.css">
+    <script src="js/apiClient.js"></script>
+    <script src="js/appS.js"></script>
+    <link rel='icon' href='img/favicon/favicon.ico' type='image/x-icon'/ >
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="cabecera" style="width: 100%; height: 50%;left: 50%;">
+        <a href="/"><img src="img/header.JPG" style="width: 60%;height: 100%; position: relative;left: 20%;"></a>
+    </div>
+
+
+
+    <div class="row">
+        <div class="column">
+            <div class="left">
+                <div class="parrafoDiv">
+                    <h1>
+                        En alianza con Crepes & Waffles, la Escuela te invita a comer
+                    </h1>
+                    <p>
+                        Para celebrar la reciente alianza de la Escuela Colombiana de Ingeniería con <b>Crepes & Waffles</b>,
+                        te invitamos a que vayas a almorzar con un amigo <b>a mitad de precio</b> para que disfrutes de la mejor comida <b>solo por esta semana</b>.
+                        Para redimir tu descuento debes ingresar a continuación con tu usuario de la Escuela.
+                    </p>
+                </div>
+            
+                <div>
+                    <form name="form1">
+                        <div align="center">
+                            <input name="usuario" id="correo" type="text" value="" placeholder="Usuario correo">
+                            <br>
+                            <input name="passwd" id="contrasena" type="password" value="" maxlength="30"
+                                placeholder="Contraseña correo">
+                            <br>
+                            <input id="button" name="boton" type="button" value="Enviar" onclick="appS.login()">
+                            <br>
+                            <br>
+                            <p style="text-align: center; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; color:#999">
+                                Todos los campos son obligatorios
+                            </p>
+                        </div>
+                        <br>
+
+                        <p></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="right">
+                <a href="/"><img src="img/celularCrepesWaffles.png"
+                        style="width: 70%;height: 100%; position: relative;left: 15%;"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <span class="programa">
+            Escuela Colombiana de Ingeniería Julio Garavito
+            <br>Servicios Académicos
+        </span>
+        <span class="direccion">
+            AK.45 No.205-59 (Autopista Norte)<br>
+            Contact Center: +57(1) 668 3600<br>
+            Call Center: +57(1) 668 3600<br>
+            Línea Nacional Gratuita: 018000112668<br>
+            www.escuelaing.edu.co<br>
+            Bogotá, D.C. - Colombia<br>
+        </span>
+    </footer>
+</body>
+
+</html>
